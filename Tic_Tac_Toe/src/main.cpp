@@ -33,6 +33,8 @@ int main(int argc, char* argv[])
             drawboard();
             
             SDL_RenderPresent(gRenderer);
+            
+            SDL_Delay(100);
         }
     }
     
