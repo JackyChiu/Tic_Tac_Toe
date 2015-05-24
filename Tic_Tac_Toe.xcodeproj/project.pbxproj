@@ -13,6 +13,7 @@
 		0F0BEF861B0FB39500BB8EA5 /* drawboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */; };
 		0F0BEF871B0FB39500BB8EA5 /* init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BEF841B0FB39500BB8EA5 /* init.cpp */; };
 		0F0BEF881B0FB39500BB8EA5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BEF851B0FB39500BB8EA5 /* main.cpp */; };
+		0F2661731B11714300EA1878 /* close.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F2661721B11714300EA1878 /* close.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawboard.cpp; sourceTree = "<group>"; };
 		0F0BEF841B0FB39500BB8EA5 /* init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = init.cpp; sourceTree = "<group>"; };
 		0F0BEF851B0FB39500BB8EA5 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0F2661721B11714300EA1878 /* close.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = close.cpp; sourceTree = "<group>"; };
+		0F2661741B11718B00EA1878 /* close.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = close.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +87,9 @@
 		0F0BEF7F1B0FB39500BB8EA5 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				0F0BEF801B0FB39500BB8EA5 /* drawboard.h */,
 				0F0BEF811B0FB39500BB8EA5 /* init.h */,
+				0F2661741B11718B00EA1878 /* close.h */,
+				0F0BEF801B0FB39500BB8EA5 /* drawboard.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -93,9 +97,10 @@
 		0F0BEF821B0FB39500BB8EA5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */,
-				0F0BEF841B0FB39500BB8EA5 /* init.cpp */,
 				0F0BEF851B0FB39500BB8EA5 /* main.cpp */,
+				0F0BEF841B0FB39500BB8EA5 /* init.cpp */,
+				0F2661721B11714300EA1878 /* close.cpp */,
+				0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2661731B11714300EA1878 /* close.cpp in Sources */,
 				0F0BEF861B0FB39500BB8EA5 /* drawboard.cpp in Sources */,
 				0F0BEF871B0FB39500BB8EA5 /* init.cpp in Sources */,
 				0F0BEF881B0FB39500BB8EA5 /* main.cpp in Sources */,
