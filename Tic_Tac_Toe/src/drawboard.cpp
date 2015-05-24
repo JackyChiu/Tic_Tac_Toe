@@ -23,4 +23,5 @@ void drawboard()
         SDL_RenderDrawLine( gRenderer, 0, y, SCREEN_WIDTH, y);
     }
     
+     SDL_RenderPresent(gRenderer);
 }
