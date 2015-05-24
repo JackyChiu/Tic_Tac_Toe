@@ -17,7 +17,6 @@
 using namespace std;
 
 bool init();
-void drawboard();
 
 const int SCREEN_WIDTH=690;
 const int SCREEN_HEIGHT=690;
