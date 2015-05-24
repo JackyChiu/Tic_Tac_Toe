@@ -7,6 +7,8 @@
 //
 
 #include "init.h"
+#include "close.h"
+#include "drawboard.h"
 
 int main(int argc, char* argv[])
 {
@@ -37,6 +39,8 @@ int main(int argc, char* argv[])
             SDL_Delay(100);
         }
     }
+    
+    close();
     
     return 0;
 }
