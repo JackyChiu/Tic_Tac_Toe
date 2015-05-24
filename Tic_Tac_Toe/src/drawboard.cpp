@@ -8,6 +8,7 @@
 
 //#include "drawboard.h"
 #include "init.h"
+#include "drawboard.h"
 
 void drawboard()
 {
