@@ -9,13 +9,20 @@
 #include "init.h"
 #include "close.h"
 #include "drawboard.h"
+#include "LTexture.h"
+#include "LButton.h"
+#include "loadMedia.h"
 
 int main(int argc, char* argv[])
 {
+    //make window
     if(!init())
     {
         cout<<"Init failed";
     }
+    
+    //loads buttons and sprites
+    loadMedia();
     
     bool quit=false;
     

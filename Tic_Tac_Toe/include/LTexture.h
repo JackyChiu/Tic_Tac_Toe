@@ -14,6 +14,8 @@
 #include <SDL2_image/SDL_image.h>
 #include <string>
 
+using namespace std;
+
 class LTexture
 {
 public:
@@ -29,5 +31,7 @@ private:
     int width;
     int height;
 };
+
+extern LTexture ButtonSpriteSheet;
 
 #endif

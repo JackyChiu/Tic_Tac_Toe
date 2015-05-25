@@ -9,6 +9,8 @@
 #include "LTexture.h"
 #include "init.h"
 
+LTexture ButtonSpriteSheet;
+
 LTexture::LTexture()
 {
     mTexture=NULL;
@@ -25,10 +27,10 @@ void LTexture::loadFromFile(string path)
 {
     free();
     
-    SDL_Texture *newTexture;
+    SDL_Texture *newTexture=NULL;
     
-    SDL_Surface *loadedSurface=IMG_Load(path.c_str());
-    
+    SDL_Surface* loadedSurface=IMG_Load(path.c_str());
+
     newTexture=SDL_CreateTextureFromSurface(gRenderer,loadedSurface);
     
     width=loadedSurface->w;
@@ -63,7 +65,15 @@ void LTexture::render(int x, int y,SDL_Rect *clip)
     SDL_RenderCopy(gRenderer, mTexture, clip, &renderQuad);
 }
 
+int LTexture::getwidth()
+{
+    return width;
+}
 
+int LTexture::getheight()
+{
+    return height;
+}
 
 
 
