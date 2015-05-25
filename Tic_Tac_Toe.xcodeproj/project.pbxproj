@@ -13,6 +13,7 @@
 		0F0BEF861B0FB39500BB8EA5 /* drawboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */; };
 		0F0BEF871B0FB39500BB8EA5 /* init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BEF841B0FB39500BB8EA5 /* init.cpp */; };
 		0F0BEF881B0FB39500BB8EA5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BEF851B0FB39500BB8EA5 /* main.cpp */; };
+		0F12A2D91B129CEC0062CFA4 /* LTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F12A2D81B129CEC0062CFA4 /* LTexture.cpp */; };
 		0F2661731B11714300EA1878 /* close.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F2661721B11714300EA1878 /* close.cpp */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawboard.cpp; sourceTree = "<group>"; };
 		0F0BEF841B0FB39500BB8EA5 /* init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = init.cpp; sourceTree = "<group>"; };
 		0F0BEF851B0FB39500BB8EA5 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0F12A2D71B129BB10062CFA4 /* LTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTexture.h; sourceTree = "<group>"; };
+		0F12A2D81B129CEC0062CFA4 /* LTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTexture.cpp; sourceTree = "<group>"; };
 		0F2661721B11714300EA1878 /* close.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = close.cpp; sourceTree = "<group>"; };
 		0F2661741B11718B00EA1878 /* close.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = close.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +93,7 @@
 				0F0BEF811B0FB39500BB8EA5 /* init.h */,
 				0F2661741B11718B00EA1878 /* close.h */,
 				0F0BEF801B0FB39500BB8EA5 /* drawboard.h */,
+				0F12A2D71B129BB10062CFA4 /* LTexture.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -101,6 +105,7 @@
 				0F0BEF841B0FB39500BB8EA5 /* init.cpp */,
 				0F2661721B11714300EA1878 /* close.cpp */,
 				0F0BEF831B0FB39500BB8EA5 /* drawboard.cpp */,
+				0F12A2D81B129CEC0062CFA4 /* LTexture.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				0F2661731B11714300EA1878 /* close.cpp in Sources */,
 				0F0BEF861B0FB39500BB8EA5 /* drawboard.cpp in Sources */,
 				0F0BEF871B0FB39500BB8EA5 /* init.cpp in Sources */,
+				0F12A2D91B129CEC0062CFA4 /* LTexture.cpp in Sources */,
 				0F0BEF881B0FB39500BB8EA5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
