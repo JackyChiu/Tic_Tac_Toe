@@ -21,6 +21,8 @@ bool init();
 const int SCREEN_WIDTH=690;
 const int SCREEN_HEIGHT=690;
 
+extern int turn;
+
 extern SDL_Window *gWindow;
 extern SDL_Renderer *gRenderer;
 

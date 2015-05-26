@@ -20,8 +20,8 @@ const int Total_Buttons=9;
 
 enum LButtonSprite
 {
-    BUTTON_SPRITE_X,
     BUTTON_SPRITE_O,
+    BUTTON_SPRITE_X,
     BUTTON_SPRITE_TOTAL
 };
 
@@ -32,6 +32,8 @@ public:
     void setposition(int x,int y);
     void handleEvent(SDL_Event* e);
     void render();
+    int getx();
+    int gety();
 private:
     SDL_Point mPosition;
     LButtonSprite CurrentSprite;

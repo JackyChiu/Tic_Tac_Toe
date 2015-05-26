@@ -13,6 +13,8 @@ using namespace std;
 SDL_Window *gWindow=NULL;
 SDL_Renderer *gRenderer=NULL;
 
+int turn=0;
+
 bool init()
 {
     bool success=true;

@@ -7,6 +7,7 @@
 //
 #include "LButton.h"
 #include "LTexture.h"
+#include "whichButton.h"
 
 SDL_Rect SpriteClips[BUTTON_SPRITE_TOTAL];
 LButton Buttons[Total_Buttons];
@@ -23,15 +24,31 @@ void LButton::setposition(int x,int y)
     mPosition.y=y;
 }
 
+
 void LButton::handleEvent(SDL_Event* e)
 {
     if(e->type==SDL_MOUSEBUTTONDOWN)
     {
-        CurrentSprite=BUTTON_SPRITE_X;
+        int x, y;
+        SDL_GetMouseState( &x, &y );
+        
+        whichButton(x,y);
+        
+        
     }
 }
 
 void LButton::render()
 {
     ButtonSpriteSheet.render(mPosition.x,mPosition.y,&SpriteClips[CurrentSprite]);
+}
+
+int LButton::getx()
+{
+    return mPosition.x;
+}
+
+int LButton::gety()
+{
+    return mPosition.y;
 }

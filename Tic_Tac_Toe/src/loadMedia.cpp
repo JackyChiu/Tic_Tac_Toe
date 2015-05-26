@@ -13,19 +13,19 @@
 
 void loadMedia()
 {
-    ButtonSpriteSheet.loadFromFile("data/ox.png");
+    ButtonSpriteSheet.loadFromFile("data/ox2.png");
     
     //o sprite
     SpriteClips[0].x=0;
     SpriteClips[0].y=0;
-    SpriteClips[0].w=300;
-    SpriteClips[0].h=271;
+    SpriteClips[0].w=230;
+    SpriteClips[0].h=230;
     
     //x sprite
-    SpriteClips[1].x=300;
+    SpriteClips[1].x=230;
     SpriteClips[1].y=0;
-    SpriteClips[1].w=300;
-    SpriteClips[1].h=271;
+    SpriteClips[1].w=230;
+    SpriteClips[1].h=230;
     
     //button positions
     Buttons[0].setposition(0,0);
