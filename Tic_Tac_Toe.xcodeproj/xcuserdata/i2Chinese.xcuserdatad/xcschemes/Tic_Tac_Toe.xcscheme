@@ -44,7 +44,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/i2Chinese/GameDev/Tic_Tac_Toe"
+      customWorkingDirectory = "/Users/i2Chinese/GameDev/Tic_Tac_Toe/Tic_Tac_Toe"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
