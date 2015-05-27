@@ -11,6 +11,7 @@
 
 SDL_Rect SpriteClips[BUTTON_SPRITE_TOTAL];
 LButton Buttons[Total_Buttons];
+LButtonSprite CurrentSprite;
 
 LButton::LButton()
 {
@@ -24,19 +25,17 @@ void LButton::setposition(int x,int y)
     mPosition.y=y;
 }
 
-
-void LButton::handleEvent(SDL_Event* e)
+/*
+bool LButton::buttonPressed(SDL_Event* e)
 {
     if(e->type==SDL_MOUSEBUTTONDOWN)
     {
-        int x, y;
-        SDL_GetMouseState( &x, &y );
-        
-        whichButton(x,y);
-        
-        
+        return true;
     }
+    
+    else return false;
 }
+ */
 
 void LButton::render()
 {

@@ -29,13 +29,13 @@ void loadMedia()
     
     //button positions
     Buttons[0].setposition(0,0);
-    Buttons[1].setposition(SCREEN_WIDTH/3, 0);
-    Buttons[2].setposition(2*SCREEN_WIDTH/3, 0);
-    Buttons[3].setposition(0, SCREEN_WIDTH/3);
-    Buttons[4].setposition(SCREEN_WIDTH/3, SCREEN_WIDTH/3);
-    Buttons[5].setposition(2*SCREEN_WIDTH/3, SCREEN_WIDTH/3);
-    Buttons[6].setposition(0, 2*SCREEN_WIDTH/3);
-    Buttons[7].setposition(SCREEN_WIDTH/3, 2*SCREEN_WIDTH/3);
-    Buttons[8].setposition(2*SCREEN_WIDTH/3, 2*SCREEN_WIDTH/3);
+    Buttons[1].setposition(buttonWidth, 0);
+    Buttons[2].setposition(2*buttonWidth, 0);
+    Buttons[3].setposition(0, buttonHeight);
+    Buttons[4].setposition(buttonWidth, buttonHeight);
+    Buttons[5].setposition(2*buttonWidth, buttonHeight);
+    Buttons[6].setposition(0, 2*buttonHeight);
+    Buttons[7].setposition(buttonWidth, 2*buttonHeight);
+    Buttons[8].setposition(2*buttonWidth, 2*buttonHeight);
 
 }

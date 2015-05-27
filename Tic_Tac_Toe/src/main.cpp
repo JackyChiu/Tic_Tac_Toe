@@ -12,6 +12,8 @@
 #include "LTexture.h"
 #include "LButton.h"
 #include "loadMedia.h"
+#include "whichButton.h"
+#include "play.h"
 
 int main(int argc, char* argv[])
 {
@@ -42,10 +44,17 @@ int main(int argc, char* argv[])
             
             drawboard();
             
-            for(int i=0;i<Total_Buttons;i++)
+            if(e.type==SDL_MOUSEBUTTONDOWN)
             {
-                Buttons[i].handleEvent(&e);
+                int x,y;
+                SDL_GetMouseState( &x, &y );
+                
+                tile=whichButton(x,y);
+                
+                play();
+                
             }
+            
             
             SDL_RenderPresent(gRenderer);
             

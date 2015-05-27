@@ -16,6 +16,8 @@
 
 using namespace std;
 
+const int buttonWidth=230;
+const int buttonHeight=230;
 const int Total_Buttons=9;
 
 enum LButtonSprite
@@ -30,16 +32,16 @@ class LButton
 public:
     LButton();
     void setposition(int x,int y);
-    void handleEvent(SDL_Event* e);
+    //bool buttonPressed(SDL_Event* e);
     void render();
     int getx();
     int gety();
 private:
     SDL_Point mPosition;
-    LButtonSprite CurrentSprite;
 };
 
 extern SDL_Rect SpriteClips[BUTTON_SPRITE_TOTAL];
 extern LButton Buttons[Total_Buttons];
+extern LButtonSprite CurrentSprite;
 
 #endif
