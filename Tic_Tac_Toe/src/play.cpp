@@ -15,7 +15,6 @@ void play()
 {
     if(tile!=9)
     {
-        
         CurrentSprite=BUTTON_SPRITE_X;
         Buttons[tile].render();
     }
