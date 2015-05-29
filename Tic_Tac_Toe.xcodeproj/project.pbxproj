@@ -19,6 +19,8 @@
 		0F2661731B11714300EA1878 /* close.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F2661721B11714300EA1878 /* close.cpp */; };
 		0F4CF1301B1535E10006548C /* whichButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F4CF12F1B1535E10006548C /* whichButton.cpp */; };
 		0F4CF1331B1632420006548C /* play.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F4CF1321B1632420006548C /* play.cpp */; };
+		0FB65AF21B18C85200412BEA /* checkGameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65AF11B18C85200412BEA /* checkGameOver.cpp */; };
+		0FB65AF51B18DC3E00412BEA /* announceWinner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65AF41B18DC3E00412BEA /* announceWinner.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +57,10 @@
 		0F4CF12F1B1535E10006548C /* whichButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = whichButton.cpp; sourceTree = "<group>"; };
 		0F4CF1311B16320E0006548C /* play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = play.h; sourceTree = "<group>"; };
 		0F4CF1321B1632420006548C /* play.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = play.cpp; sourceTree = "<group>"; };
+		0FB65AF01B18C7F600412BEA /* checkGameOver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkGameOver.h; sourceTree = "<group>"; };
+		0FB65AF11B18C85200412BEA /* checkGameOver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = checkGameOver.cpp; sourceTree = "<group>"; };
+		0FB65AF31B18DBE500412BEA /* announceWinner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = announceWinner.h; sourceTree = "<group>"; };
+		0FB65AF41B18DC3E00412BEA /* announceWinner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = announceWinner.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,8 @@
 				0F12A2DF1B1396C90062CFA4 /* loadMedia.h */,
 				0F4CF12E1B1535B90006548C /* whichButton.h */,
 				0F4CF1311B16320E0006548C /* play.h */,
+				0FB65AF01B18C7F600412BEA /* checkGameOver.h */,
+				0FB65AF31B18DBE500412BEA /* announceWinner.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -126,6 +134,8 @@
 				0F12A2E01B1396FE0062CFA4 /* loadMedia.cpp */,
 				0F4CF12F1B1535E10006548C /* whichButton.cpp */,
 				0F4CF1321B1632420006548C /* play.cpp */,
+				0FB65AF11B18C85200412BEA /* checkGameOver.cpp */,
+				0FB65AF41B18DC3E00412BEA /* announceWinner.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -192,8 +202,10 @@
 				0F0BEF861B0FB39500BB8EA5 /* drawboard.cpp in Sources */,
 				0F0BEF871B0FB39500BB8EA5 /* init.cpp in Sources */,
 				0F12A2D91B129CEC0062CFA4 /* LTexture.cpp in Sources */,
+				0FB65AF51B18DC3E00412BEA /* announceWinner.cpp in Sources */,
 				0F12A2DE1B1392A30062CFA4 /* LButton.cpp in Sources */,
 				0F0BEF881B0FB39500BB8EA5 /* main.cpp in Sources */,
+				0FB65AF21B18C85200412BEA /* checkGameOver.cpp in Sources */,
 				0F4CF1301B1535E10006548C /* whichButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
