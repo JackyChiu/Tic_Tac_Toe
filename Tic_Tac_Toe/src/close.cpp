@@ -8,9 +8,12 @@
 
 
 #include "init.h"
+#include "LTexture.h"
 
 void close()
 {
+    ButtonSpriteSheet.free();
+    
     SDL_DestroyWindow(gWindow);
     gWindow=NULL;
     

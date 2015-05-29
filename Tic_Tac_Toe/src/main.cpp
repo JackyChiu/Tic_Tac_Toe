@@ -30,6 +30,7 @@ int main(int argc, char* argv[])
     
     SDL_Event e;
     
+    
     while(quit!=true)
     {
         while(SDL_PollEvent(&e)!=0)
@@ -47,18 +48,26 @@ int main(int argc, char* argv[])
             if(e.type==SDL_MOUSEBUTTONDOWN)
             {
                 int x,y;
+                
                 SDL_GetMouseState( &x, &y );
                 
                 tile=whichButton(x,y);
                 
-                play();
+                //testing values
+                cout<<x<<endl;
+                cout<<y<<endl;
+                cout<<tile<<endl;
+                
+                 Buttons[tile].render();
+                
+                //play();
                 
             }
             
             
             SDL_RenderPresent(gRenderer);
             
-            SDL_Delay(100);
+            SDL_Delay(50);
 
         }
     }

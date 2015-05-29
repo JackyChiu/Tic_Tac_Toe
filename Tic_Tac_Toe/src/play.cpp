@@ -15,6 +15,7 @@ void play()
 {
     if(tile!=9)
     {
+        cout<<"Clicked";
         CurrentSprite=BUTTON_SPRITE_X;
         Buttons[tile].render();
     }

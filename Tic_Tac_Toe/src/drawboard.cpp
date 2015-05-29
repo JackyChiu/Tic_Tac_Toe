@@ -9,17 +9,18 @@
 //#include "drawboard.h"
 #include "init.h"
 #include "drawboard.h"
+#include "LButton.h"
 
 void drawboard()
 {
     SDL_SetRenderDrawColor( gRenderer, 0x00, 0x00, 0x00, 0xFF );
     
-    for(int x=SCREEN_WIDTH/3;x<SCREEN_WIDTH;x+=SCREEN_WIDTH/3)
+    for(int x=buttonWidth;x<SCREEN_WIDTH;x+=buttonWidth)
     {
         SDL_RenderDrawLine( gRenderer, x, 0, x, SCREEN_HEIGHT );
     }
     
-    for(int y=SCREEN_HEIGHT/3;y<SCREEN_HEIGHT;y+=SCREEN_HEIGHT/3)
+    for(int y=buttonHeight;y<SCREEN_HEIGHT;y+=buttonHeight)
     {
         SDL_RenderDrawLine( gRenderer, 0, y, SCREEN_WIDTH, y);
     }
