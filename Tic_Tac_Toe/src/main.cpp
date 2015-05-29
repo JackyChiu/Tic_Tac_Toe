@@ -14,6 +14,8 @@
 #include "loadMedia.h"
 #include "whichButton.h"
 #include "play.h"
+#include "checkGameOver.h"
+#include "announceWinner.h"
 
 int main(int argc, char* argv[])
 {
@@ -40,36 +42,33 @@ int main(int argc, char* argv[])
                 quit=true;
             }
             
-            SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
-            SDL_RenderClear(gRenderer);
-            
-            drawboard();
-            
             if(e.type==SDL_MOUSEBUTTONDOWN)
             {
-                int x,y;
                 
                 SDL_GetMouseState( &x, &y );
                 
                 tile=whichButton(x,y);
                 
-                //testing values
-                cout<<x<<endl;
-                cout<<y<<endl;
-                cout<<tile<<endl;
-                
-                 Buttons[tile].render();
-                
-                //play();
-                
             }
             
-            
-            SDL_RenderPresent(gRenderer);
-            
-            SDL_Delay(50);
-
         }
+        SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
+        SDL_RenderClear(gRenderer);
+        
+        play();
+        
+        drawboard();
+        
+        if(checkGameOver()==true)
+        {
+            quit=true;
+            //announceWinner();
+        }
+        
+        SDL_RenderPresent(gRenderer);
+        
+        SDL_Delay(50);
+        
     }
     
     close();

@@ -1,13 +1,13 @@
 //
-//  play.h
+//  checkGameOver.h
 //  Tic_Tac_Toe
 //
-//  Created by Jacky Chiu on 2015-05-27.
+//  Created by Jacky Chiu on 2015-05-29.
 //  Copyright (c) 2015 Jacky Chiu. All rights reserved.
 //
 
-#ifndef Tic_Tac_Toe_play_h
-#define Tic_Tac_Toe_play_h
+#ifndef Tic_Tac_Toe_checkGameOver_h
+#define Tic_Tac_Toe_checkGameOver_h
 
 #include <iostream>
 #include <SDL2/SDL.h>
@@ -16,10 +16,8 @@
 
 using namespace std;
 
-extern int tile;
+extern int winner;
 
-extern int gameboard[3][3];
-
-void play();
+bool checkGameOver();
 
 #endif

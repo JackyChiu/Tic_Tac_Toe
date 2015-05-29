@@ -14,6 +14,7 @@
 void loadMedia()
 {
     ButtonSpriteSheet.loadFromFile("data/ox2.png");
+    font= TTF_OpenFont("data/MyriadPro.ttf", 28);
     
     //o sprite
     SpriteClips[0].x=0;

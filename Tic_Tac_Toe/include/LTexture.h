@@ -12,6 +12,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2_image/SDL_image.h>
+#include <SDL2_ttf/SDL_ttf.h>
 #include <string>
 
 using namespace std;
@@ -22,6 +23,7 @@ public:
     LTexture();
     ~LTexture();
     void loadFromFile(string);
+    void loadText(string,SDL_Color);
     void free();
     void render(int x,int y,SDL_Rect *clip=NULL);
     int getheight();
@@ -32,6 +34,8 @@ private:
     int height;
 };
 
+extern TTF_Font *font;
+extern LTexture textTexture;
 extern LTexture ButtonSpriteSheet;
 
 #endif

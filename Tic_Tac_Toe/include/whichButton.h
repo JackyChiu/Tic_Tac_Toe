@@ -16,6 +16,8 @@
 
 using namespace std;
 
+extern int x,y;
+
 int whichButton(int,int);
 
 #endif

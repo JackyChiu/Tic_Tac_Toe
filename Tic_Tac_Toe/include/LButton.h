@@ -32,7 +32,6 @@ class LButton
 public:
     LButton();
     void setposition(int x,int y);
-    //bool buttonPressed(SDL_Event* e);
     void render();
     int getx();
     int gety();

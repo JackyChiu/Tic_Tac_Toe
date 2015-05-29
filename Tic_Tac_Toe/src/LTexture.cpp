@@ -10,6 +10,8 @@
 #include "init.h"
 
 LTexture ButtonSpriteSheet;
+TTF_Font *font= NULL;
+LTexture textTexture;
 
 LTexture::LTexture()
 {
@@ -39,6 +41,20 @@ void LTexture::loadFromFile(string path)
     SDL_FreeSurface(loadedSurface);
     
     mTexture=newTexture;
+}
+
+void LTexture::loadText(string text, SDL_Color textColor)
+{
+    free();
+    
+    SDL_Surface* textSurface= TTF_RenderText_Solid(font, text.c_str(), textColor);
+    
+    mTexture= SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    
+    width=textSurface->w;
+    height=textSurface->h;
+    
+    SDL_FreeSurface(textSurface);
 }
 
 void LTexture::free()

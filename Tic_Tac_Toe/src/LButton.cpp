@@ -25,18 +25,6 @@ void LButton::setposition(int x,int y)
     mPosition.y=y;
 }
 
-/*
-bool LButton::buttonPressed(SDL_Event* e)
-{
-    if(e->type==SDL_MOUSEBUTTONDOWN)
-    {
-        return true;
-    }
-    
-    else return false;
-}
- */
-
 void LButton::render()
 {
     ButtonSpriteSheet.render(mPosition.x,mPosition.y,&SpriteClips[CurrentSprite]);

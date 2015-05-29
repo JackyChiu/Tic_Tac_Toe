@@ -8,8 +8,6 @@
 
 #include "init.h"
 
-using namespace std;
-
 SDL_Window *gWindow=NULL;
 SDL_Renderer *gRenderer=NULL;
 
