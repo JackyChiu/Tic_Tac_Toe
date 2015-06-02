@@ -28,9 +28,22 @@ bool checkGameOver()
     {
         if(gameboard[i][1]!=9 && gameboard[i][0]==gameboard[i][1] && gameboard[i][1]==gameboard[i][2])
         {
-            winner=gameboard[0][i];
+            winner=gameboard[i][0];
             return true;
         }
+    }
+    
+    //diagonal
+    if(gameboard[0][0]!=9 && gameboard[0][0]==gameboard[1][1] && gameboard[1][1]==gameboard[2][2])
+    {
+        winner=gameboard[0][0];
+        return true;
+    }
+    
+    if(gameboard[2][0]!=9 && gameboard[2][0]==gameboard[1][1] && gameboard[1][1]==gameboard[0][2])
+    {
+        winner=gameboard[2][0];
+        return true;
     }
     
     //tie
@@ -44,5 +57,6 @@ bool checkGameOver()
             }
         }
     }
+    winner=3;
     return true;
 }

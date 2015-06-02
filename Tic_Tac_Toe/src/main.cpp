@@ -44,30 +44,40 @@ int main(int argc, char* argv[])
             
             if(e.type==SDL_MOUSEBUTTONDOWN)
             {
+                if(checkGameOver()==true)
+                {
+                    for(int i=0;i<3;i++)
+                    {
+                        for(int j=0;j<3;j++)
+                        {
+                            gameboard[i][j]=9;
+                        }
+                    }
+                }
                 
                 SDL_GetMouseState( &x, &y );
                 
                 tile=whichButton(x,y);
-                
             }
             
         }
         SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
         SDL_RenderClear(gRenderer);
         
-        play();
+        if(checkGameOver()==true)
+        {
+            announceWinner();
+        }
+        else
+        {
+            play();
+        }
         
         drawboard();
         
-        if(checkGameOver()==true)
-        {
-            quit=true;
-            //announceWinner();
-        }
-        
         SDL_RenderPresent(gRenderer);
         
-        SDL_Delay(50);
+        SDL_Delay(100);
         
     }
     

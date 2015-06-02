@@ -7,27 +7,30 @@
 //
 
 #include "announceWinner.h"
+#include "init.h"
 #include "LTexture.h"
-#include "checkGameOver.h"
+#include "checkGameOver.h" 
 
 
-void announaceWinner()
+void announceWinner()
 {
-    if(winner==9)
+    SDL_Color textColor = { 0, 0, 0 };
+    
+    if(winner==3)
     {
-        SDL_Color textColor = { 0, 0, 0 };
-        textTexture.loadText("Its a tie!", textColor);
+        textTexture.loadText("It's a tie!", textColor);
+        textTexture.render( (SCREEN_WIDTH- textTexture.getwidth()) /2, (SCREEN_HEIGHT- textTexture.getheight()) /2);
     }
     
     if(winner==0)
     {
-        SDL_Color textColor = { 0, 0, 0 };
         textTexture.loadText("O wins!", textColor);
+        textTexture.render( (SCREEN_WIDTH- textTexture.getwidth()) /2, (SCREEN_HEIGHT- textTexture.getheight()) /2);
     }
     
-    if(winner==0)
+    if(winner==1)
     {
-        SDL_Color textColor = { 0, 0, 0 };
         textTexture.loadText("X wins!", textColor);
+        textTexture.render( (SCREEN_WIDTH- textTexture.getwidth()) /2, (SCREEN_HEIGHT- textTexture.getheight()) /2);
     }
 }

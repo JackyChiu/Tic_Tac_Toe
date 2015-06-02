@@ -14,6 +14,11 @@ void close()
 {
     ButtonSpriteSheet.free();
     
+    textTexture.free();
+    
+    TTF_CloseFont(font);
+    font=NULL;
+    
     SDL_DestroyWindow(gWindow);
     gWindow=NULL;
     
@@ -22,5 +27,6 @@ void close()
     
     SDL_Quit();
     IMG_Quit();
+    TTF_Quit();
     
 }

@@ -10,6 +10,7 @@
 #include "LButton.h"
 #include "whichButton.h"
 #include "init.h"
+#include "announceWinner.h"
 
 int tile=9;
 
@@ -27,10 +28,6 @@ void play()
     
     if(tile!=9)
     {
-        cout<<x<<endl;
-        cout<<y<<endl;
-        cout<<tile<<endl;
-        
         if(turn%2==0 && gameboard[tile/3][tile%3]==9)
         {
             gameboard[tile/3][tile%3]=0;

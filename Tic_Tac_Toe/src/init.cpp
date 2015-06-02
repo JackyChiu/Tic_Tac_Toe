@@ -52,6 +52,13 @@ bool init()
                 {
                     cout<<"Image failed. SDl_image Error: %s\n"<<IMG_GetError()<<endl;
                     success=false;
+                    
+                if( TTF_Init() ==-1)
+                {
+                    cout<<"Text failed. SDL_ttf Error: %s\n"<<TTF_GetError()<<endl;
+                    success=false;
+                }
+                    
                 }
             }
         }

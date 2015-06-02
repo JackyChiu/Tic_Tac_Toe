@@ -13,20 +13,28 @@
 
 void loadMedia()
 {
-    ButtonSpriteSheet.loadFromFile("data/ox2.png");
-    font= TTF_OpenFont("data/MyriadPro.ttf", 28);
+    ButtonSpriteSheet.loadFromFile("data/ox.png");
+    
+    TTF_Init();
+    
+    font= TTF_OpenFont("data/MyriadPro.ttf", 65);
+    if( font == NULL )
+    {
+        cout<<"Failed to load font! SDL_ttf Error: %s\n"<< TTF_GetError()<<endl;
+    }
+
     
     //o sprite
     SpriteClips[0].x=0;
     SpriteClips[0].y=0;
-    SpriteClips[0].w=229;
-    SpriteClips[0].h=229;
+    SpriteClips[0].w=230;
+    SpriteClips[0].h=230;
     
     //x sprite
     SpriteClips[1].x=230;
     SpriteClips[1].y=0;
-    SpriteClips[1].w=229;
-    SpriteClips[1].h=229;
+    SpriteClips[1].w=230;
+    SpriteClips[1].h=230;
     
     //button positions
     Buttons[0].setposition(0,0);

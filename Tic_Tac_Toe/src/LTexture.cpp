@@ -47,14 +47,27 @@ void LTexture::loadText(string text, SDL_Color textColor)
 {
     free();
     
+    SDL_Texture *newTexture=NULL;
+    
     SDL_Surface* textSurface= TTF_RenderText_Solid(font, text.c_str(), textColor);
     
-    mTexture= SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    if( textSurface == NULL )
+    {
+        cout<<"Unable to render text surface! SDL_ttf Error: %s\n"<<TTF_GetError()<<endl;
+    }
     
+    newTexture= SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    
+    if( newTexture == NULL )
+    {
+        cout<<"Unable to create texture from rendered text! SDL Error: %s\n"<<SDL_GetError()<<endl;
+    }
     width=textSurface->w;
     height=textSurface->h;
     
     SDL_FreeSurface(textSurface);
+    
+    mTexture=newTexture;
 }
 
 void LTexture::free()
