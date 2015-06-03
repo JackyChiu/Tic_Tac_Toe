@@ -12,6 +12,7 @@
 LTexture ButtonSpriteSheet;
 TTF_Font *font= NULL;
 LTexture textTexture;
+Uint8 a=255;
 
 LTexture::LTexture()
 {
@@ -79,6 +80,12 @@ void LTexture::free()
         width=0;
         height=0;
     }
+}
+
+void LTexture::setAlpha( Uint8 alpha )
+{
+    //Modulate texture alpha
+    SDL_SetTextureAlphaMod( mTexture, alpha );
 }
 
 void LTexture::render(int x, int y,SDL_Rect *clip)

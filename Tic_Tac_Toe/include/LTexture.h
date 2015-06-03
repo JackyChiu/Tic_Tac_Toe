@@ -25,6 +25,7 @@ public:
     void loadFromFile(string);
     void loadText(string,SDL_Color);
     void free();
+    void setAlpha(Uint8);
     void render(int x,int y,SDL_Rect *clip=NULL);
     int getheight();
     int getwidth();
@@ -37,5 +38,6 @@ private:
 extern TTF_Font *font;
 extern LTexture textTexture;
 extern LTexture ButtonSpriteSheet;
+extern Uint8 a;
 
 #endif

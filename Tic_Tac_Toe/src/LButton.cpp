@@ -8,6 +8,7 @@
 #include "LButton.h"
 #include "LTexture.h"
 #include "whichButton.h"
+#include "checkGameOver.h"
 
 SDL_Rect SpriteClips[BUTTON_SPRITE_TOTAL];
 LButton Buttons[Total_Buttons];
@@ -27,7 +28,18 @@ void LButton::setposition(int x,int y)
 
 void LButton::render()
 {
-    ButtonSpriteSheet.render(mPosition.x,mPosition.y,&SpriteClips[CurrentSprite]);
+    if(checkGameOver()==true)
+    {
+        a=50;
+        ButtonSpriteSheet.setAlpha(a);
+        ButtonSpriteSheet.render(mPosition.x,mPosition.y,&SpriteClips[CurrentSprite]);
+    }
+    else
+    {
+        a=255;
+        ButtonSpriteSheet.setAlpha(a);
+        ButtonSpriteSheet.render(mPosition.x,mPosition.y,&SpriteClips[CurrentSprite]);
+    }
 }
 
 int LButton::getx()

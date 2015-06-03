@@ -27,14 +27,14 @@ void loadMedia()
     //o sprite
     SpriteClips[0].x=0;
     SpriteClips[0].y=0;
-    SpriteClips[0].w=230;
-    SpriteClips[0].h=230;
+    SpriteClips[0].w=buttonWidth;
+    SpriteClips[0].h=buttonWidth;
     
     //x sprite
-    SpriteClips[1].x=230;
+    SpriteClips[1].x=buttonWidth;
     SpriteClips[1].y=0;
-    SpriteClips[1].w=230;
-    SpriteClips[1].h=230;
+    SpriteClips[1].w=buttonWidth;
+    SpriteClips[1].h=buttonHeight;
     
     //button positions
     Buttons[0].setposition(0,0);

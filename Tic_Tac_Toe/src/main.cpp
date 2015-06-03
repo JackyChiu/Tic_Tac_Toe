@@ -35,6 +35,20 @@ int main(int argc, char* argv[])
     
     while(quit!=true)
     {
+        if(e.key.keysym.sym==SDLK_SPACE)
+        {
+            for(int i=0;i<3;i++)
+                {
+                    for(int j=0;j<3;j++)
+                    {
+                        gameboard[i][j]=9;
+                    }
+                }
+            
+            x=NULL;
+            y=NULL;
+            tile=9;
+        }
         while(SDL_PollEvent(&e)!=0)
         {
             if(e.type==SDL_QUIT)
@@ -53,11 +67,17 @@ int main(int argc, char* argv[])
                             gameboard[i][j]=9;
                         }
                     }
+                    x=NULL;
+                    y=NULL;
+                    tile=9;
                 }
                 
-                SDL_GetMouseState( &x, &y );
-                
-                tile=whichButton(x,y);
+                else
+                {
+                    SDL_GetMouseState( &x, &y );
+                    
+                    tile=whichButton(x,y);
+                }
             }
             
         }
@@ -71,10 +91,9 @@ int main(int argc, char* argv[])
         else
         {
             play();
+            drawboard();
         }
-        
-        drawboard();
-        
+
         SDL_RenderPresent(gRenderer);
         
         SDL_Delay(100);
