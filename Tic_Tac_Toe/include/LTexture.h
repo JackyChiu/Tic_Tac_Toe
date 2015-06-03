@@ -25,6 +25,7 @@ public:
     void loadFromFile(string);
     void loadText(string,SDL_Color);
     void free();
+    void setBlendMode(SDL_BlendMode);
     void setAlpha(Uint8);
     void render(int x,int y,SDL_Rect *clip=NULL);
     int getheight();

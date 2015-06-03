@@ -14,6 +14,7 @@
 void loadMedia()
 {
     ButtonSpriteSheet.loadFromFile("data/ox.png");
+    ButtonSpriteSheet.setBlendMode(SDL_BLENDMODE_BLEND);
     
     TTF_Init();
     

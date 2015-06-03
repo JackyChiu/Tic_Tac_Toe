@@ -35,26 +35,28 @@ int main(int argc, char* argv[])
     
     while(quit!=true)
     {
-        if(e.key.keysym.sym==SDLK_SPACE)
-        {
-            for(int i=0;i<3;i++)
-                {
-                    for(int j=0;j<3;j++)
-                    {
-                        gameboard[i][j]=9;
-                    }
-                }
-            
-            x=NULL;
-            y=NULL;
-            tile=9;
-        }
         while(SDL_PollEvent(&e)!=0)
         {
             if(e.type==SDL_QUIT)
             {
                 quit=true;
             }
+            
+            if(e.key.keysym.sym==SDLK_SPACE)
+            {
+                for(int i=0;i<3;i++)
+                {
+                    for(int j=0;j<3;j++)
+                    {
+                        gameboard[i][j]=9;
+                    }
+                }
+                
+                x=NULL;
+                y=NULL;
+                tile=9;
+            }
+
             
             if(e.type==SDL_MOUSEBUTTONDOWN)
             {
@@ -88,11 +90,11 @@ int main(int argc, char* argv[])
         {
             announceWinner();
         }
-        else
-        {
+        
             play();
             drawboard();
-        }
+     
+
 
         SDL_RenderPresent(gRenderer);
         
