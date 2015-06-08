@@ -9,7 +9,7 @@ Mr. Stankovic gave us the opportunity of learning what ever our hearts desired f
 The states of the game contain a menu and a game state. I rendered the board with SDL2 because I found the simple lines appealing. For the sprites I found them on google images. And the text font used was myriad pro found online.
 
 ###Menu
-![menu](http://i.imgur.com/t8h0bvQ.png)
+![menu](http://i.imgur.com/XBnKbJj.png)
 
 ###About
 ![about](http://i.imgur.com/yLa3DXj.png)
