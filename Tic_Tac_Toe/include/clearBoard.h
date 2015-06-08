@@ -1,13 +1,13 @@
 //
-//  announceWinner.h
+//  clearBoard.h
 //  Tic_Tac_Toe
 //
-//  Created by Jacky Chiu on 2015-05-29.
+//  Created by Jacky Chiu on 2015-06-05.
 //  Copyright (c) 2015 Jacky Chiu. All rights reserved.
 //
 
-#ifndef Tic_Tac_Toe_announceWinner_h
-#define Tic_Tac_Toe_announceWinner_h
+#ifndef Tic_Tac_Toe_clearBoard_h
+#define Tic_Tac_Toe_clearBoard_h
 
 #include <iostream>
 #include <SDL2/SDL.h>
@@ -17,8 +17,6 @@
 
 using namespace std;
 
-extern SDL_Color textColor;
-
-void announceWinner();
+void clearBoard();
 
 #endif

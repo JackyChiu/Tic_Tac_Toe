@@ -16,6 +16,9 @@
 #include "play.h"
 #include "checkGameOver.h"
 #include "announceWinner.h"
+#include "clearBoard.h"
+#include "menu.h"
+#include "about.h"
 
 int main(int argc, char* argv[])
 {
@@ -30,6 +33,8 @@ int main(int argc, char* argv[])
     
     bool quit=false;
     
+    int menubutton=0;
+    
     SDL_Event e;
     
     
@@ -37,41 +42,35 @@ int main(int argc, char* argv[])
     {
         while(SDL_PollEvent(&e)!=0)
         {
+            //quits game
             if(e.type==SDL_QUIT)
             {
                 quit=true;
             }
             
+            //clears board during game
             if(e.key.keysym.sym==SDLK_SPACE)
             {
-                for(int i=0;i<3;i++)
+                clearBoard();
+            }
+            
+            //returns to menu
+            if(e.key.keysym.sym==SDLK_ESCAPE)
+            {
+                if(startgame==true)
                 {
-                    for(int j=0;j<3;j++)
-                    {
-                        gameboard[i][j]=9;
-                    }
+                    gamecontinue=true;
                 }
-                
-                x=NULL;
-                y=NULL;
-                tile=9;
+                startgame=false;
+                aboutstate=false;
             }
 
-            
-            if(e.type==SDL_MOUSEBUTTONDOWN)
+            //click during game to play
+            if(e.type==SDL_MOUSEBUTTONDOWN && startgame==true)
             {
                 if(checkGameOver()==true)
                 {
-                    for(int i=0;i<3;i++)
-                    {
-                        for(int j=0;j<3;j++)
-                        {
-                            gameboard[i][j]=9;
-                        }
-                    }
-                    x=NULL;
-                    y=NULL;
-                    tile=9;
+                    clearBoard();
                 }
                 
                 else
@@ -82,19 +81,49 @@ int main(int argc, char* argv[])
                 }
             }
             
+            //click either start or about
+            if(e.type==SDL_MOUSEBUTTONDOWN && startgame==false)
+            {
+                SDL_GetMouseState( &x, &y );
+                
+                menubutton=whichButton(x,y);
+                
+                if(menubutton==0)
+                {
+                    startgame=true;
+                }
+                else if(menubutton==1)
+                {
+                    aboutstate=true;
+                }
+                
+            }
         }
-        SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
-        SDL_RenderClear(gRenderer);
         
-        if(checkGameOver()==true)
+        if(startgame==false && aboutstate==false)
         {
-            announceWinner();
+            menu();
         }
         
+        else if(startgame==false && aboutstate==true)
+        {
+            about();
+        }
+        
+        else if(startgame==true && aboutstate==false)
+        {
+            SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
+            SDL_RenderClear(gRenderer);
+            
             play();
             drawboard();
-     
 
+            if(checkGameOver()==true)
+            {
+                announceWinner();
+            }
+            
+        }
 
         SDL_RenderPresent(gRenderer);
         

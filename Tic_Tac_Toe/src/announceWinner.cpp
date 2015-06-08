@@ -11,11 +11,10 @@
 #include "LTexture.h"
 #include "checkGameOver.h" 
 
+SDL_Color textColor = { 0, 0, 0 };
 
 void announceWinner()
 {
-    SDL_Color textColor = { 0, 0, 0 };
-    
     if(winner==3)
     {
         font= TTF_OpenFont("data/MyriadPro.ttf", 65);
