@@ -16,7 +16,10 @@
 		0F12A2D91B129CEC0062CFA4 /* LTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F12A2D81B129CEC0062CFA4 /* LTexture.cpp */; };
 		0F12A2DE1B1392A30062CFA4 /* LButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F12A2DD1B1392A30062CFA4 /* LButton.cpp */; };
 		0F12A2E11B1396FE0062CFA4 /* loadMedia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F12A2E01B1396FE0062CFA4 /* loadMedia.cpp */; };
+		0F1C04731B220E5400151179 /* clearBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F1C04721B220E5400151179 /* clearBoard.cpp */; };
+		0F1C04761B220FE700151179 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F1C04751B220FE700151179 /* menu.cpp */; };
 		0F2661731B11714300EA1878 /* close.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F2661721B11714300EA1878 /* close.cpp */; };
+		0F3235C91B24F8BC00FEC630 /* about.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3235C81B24F8BC00FEC630 /* about.cpp */; };
 		0F4CF1301B1535E10006548C /* whichButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F4CF12F1B1535E10006548C /* whichButton.cpp */; };
 		0F4CF1331B1632420006548C /* play.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F4CF1321B1632420006548C /* play.cpp */; };
 		0FB65AF21B18C85200412BEA /* checkGameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65AF11B18C85200412BEA /* checkGameOver.cpp */; };
@@ -51,8 +54,14 @@
 		0F12A2DD1B1392A30062CFA4 /* LButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LButton.cpp; sourceTree = "<group>"; };
 		0F12A2DF1B1396C90062CFA4 /* loadMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loadMedia.h; sourceTree = "<group>"; };
 		0F12A2E01B1396FE0062CFA4 /* loadMedia.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loadMedia.cpp; sourceTree = "<group>"; };
+		0F1C045A1B220DA500151179 /* clearBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clearBoard.h; sourceTree = "<group>"; };
+		0F1C04721B220E5400151179 /* clearBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = clearBoard.cpp; sourceTree = "<group>"; };
+		0F1C04741B220FAF00151179 /* menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = menu.h; sourceTree = "<group>"; };
+		0F1C04751B220FE700151179 /* menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu.cpp; sourceTree = "<group>"; };
 		0F2661721B11714300EA1878 /* close.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = close.cpp; sourceTree = "<group>"; };
 		0F2661741B11718B00EA1878 /* close.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = close.h; sourceTree = "<group>"; };
+		0F3235C71B24F89B00FEC630 /* about.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = about.h; sourceTree = "<group>"; };
+		0F3235C81B24F8BC00FEC630 /* about.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = about.cpp; sourceTree = "<group>"; };
 		0F4CF12E1B1535B90006548C /* whichButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whichButton.h; sourceTree = "<group>"; };
 		0F4CF12F1B1535E10006548C /* whichButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = whichButton.cpp; sourceTree = "<group>"; };
 		0F4CF1311B16320E0006548C /* play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = play.h; sourceTree = "<group>"; };
@@ -118,6 +127,9 @@
 				0F4CF1311B16320E0006548C /* play.h */,
 				0FB65AF01B18C7F600412BEA /* checkGameOver.h */,
 				0FB65AF31B18DBE500412BEA /* announceWinner.h */,
+				0F1C045A1B220DA500151179 /* clearBoard.h */,
+				0F1C04741B220FAF00151179 /* menu.h */,
+				0F3235C71B24F89B00FEC630 /* about.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -136,6 +148,9 @@
 				0F4CF1321B1632420006548C /* play.cpp */,
 				0FB65AF11B18C85200412BEA /* checkGameOver.cpp */,
 				0FB65AF41B18DC3E00412BEA /* announceWinner.cpp */,
+				0F1C04721B220E5400151179 /* clearBoard.cpp */,
+				0F1C04751B220FE700151179 /* menu.cpp */,
+				0F3235C81B24F8BC00FEC630 /* about.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -199,9 +214,12 @@
 				0F2661731B11714300EA1878 /* close.cpp in Sources */,
 				0F12A2E11B1396FE0062CFA4 /* loadMedia.cpp in Sources */,
 				0F4CF1331B1632420006548C /* play.cpp in Sources */,
+				0F3235C91B24F8BC00FEC630 /* about.cpp in Sources */,
 				0F0BEF861B0FB39500BB8EA5 /* drawboard.cpp in Sources */,
 				0F0BEF871B0FB39500BB8EA5 /* init.cpp in Sources */,
 				0F12A2D91B129CEC0062CFA4 /* LTexture.cpp in Sources */,
+				0F1C04731B220E5400151179 /* clearBoard.cpp in Sources */,
+				0F1C04761B220FE700151179 /* menu.cpp in Sources */,
 				0FB65AF51B18DC3E00412BEA /* announceWinner.cpp in Sources */,
 				0F12A2DE1B1392A30062CFA4 /* LButton.cpp in Sources */,
 				0F0BEF881B0FB39500BB8EA5 /* main.cpp in Sources */,
