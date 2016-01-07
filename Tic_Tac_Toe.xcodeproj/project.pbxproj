@@ -70,6 +70,7 @@
 		0FB65AF11B18C85200412BEA /* checkGameOver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = checkGameOver.cpp; sourceTree = "<group>"; };
 		0FB65AF31B18DBE500412BEA /* announceWinner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = announceWinner.h; sourceTree = "<group>"; };
 		0FB65AF41B18DC3E00412BEA /* announceWinner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = announceWinner.cpp; sourceTree = "<group>"; };
+		1407B2EF1C3EFD230055211C /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 			children = (
 				0F0BEF7F1B0FB39500BB8EA5 /* include */,
 				0F0BEF821B0FB39500BB8EA5 /* src */,
+				1407B2EF1C3EFD230055211C /* LICENCE.txt */,
 			);
 			path = Tic_Tac_Toe;
 			sourceTree = "<group>";
